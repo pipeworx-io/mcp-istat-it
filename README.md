@@ -2,12 +2,15 @@
 
 ISTAT (Istituto Nazionale di Statistica) MCP — Italy's national statistics
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
+| `list_dataflows` | Browse or keyword-search ISTAT datasets (dataflows). Each result has an `id` (the dataflowId you pass to get_data / dataflow_structure) and an English name. ISTAT publishes ~4,800 datasets, so always pass `query` to filter unless you really want the whole list. Example: list_dataflows({ query: "unemployment" }) or list_dataflows({ query: "GDP" }). |
+| `dataflow_structure` | Get the structure (Data Structure Definition) of one ISTAT dataset: its ordered dimensions and, for each, the valid codes. Use this to learn how to build the dot-separated SDMX key for get_data. The key positions correspond to the dimensions in order; an empty position is a wildcard. Example: dataflow_structure({ dataflow_id: "101_1015" }). |
+| `get_data` | Pull observations from an ISTAT dataset. `key` is a dot-separated SDMX dimension filter, one position per dimension in the order given by dataflow_structure; leave a position empty to wildcard it. Example: get_data({ dataflow_id: "101_1015", key: "A.IT...", start_period: "2021", end_period: "2023" }) selects annual (A), REF_AREA=IT (Italy), and wildcards the rest. Omit `key` (or pass "") to fetch all series — caution, this can be large. Returns decoded series with their dimension labels and per-period values. |
 
 ## Quick Start
 
@@ -23,7 +26,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -47,7 +50,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
