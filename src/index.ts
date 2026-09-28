@@ -696,6 +696,7 @@ function collapse(s: string): string {
  *     404 "Could not find Dataflow and/or DSD related with this data request"
  *     404 "Could not find requested structures"
  *     422 "Not enough key values in query, expecting 5 got 2"
+ *     403 (OECD) "Not enough key values in query, expecting 13 got 10"
  *   ILO (its own no-data wording on the same NSI stack):
  *     404 "No data is found. Please adjust your query parameters and try again."
  *   Fusion Metadata Registry (UNICEF):
@@ -726,7 +727,9 @@ function classifySdmxMiss(status: number, body: string): SdmxMiss | undefined {
     return undefined;
   }
   if (status === 422) return 'bad_key';
-  if (status === 400 && BAD_KEY.test(body)) return 'bad_key';
+  // OECD's .Stat Suite answers the same wrong-length key with a 403, not a 422
+  // (live 2026-09-28, fleet #2496). Body-gated, so an auth 403 stays unclassified.
+  if ((status === 400 || status === 403) && BAD_KEY.test(body)) return 'bad_key';
   return undefined;
 }
 
