@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-istat-it",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "ISTAT (Istituto Nazionale di Statistica) MCP — Italy's national statistics",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-daae4708c773b6d6b1d22ab34cd26e339b49f7b00fac3a5ff2f6cc358c3659ff",
-    "sourceCommit": "1064560fd9dcd0d6fc2606298c2ba244b3a1fbeb"
+    "sourceHash": "v1-1442b613746f0eb11665647551214edfe428295d391b283de8bfac8ee697c725",
+    "sourceCommit": "c4803a3384f6a316411a1bc5abf63b4edbc62c84"
   }
 }
