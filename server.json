@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/istat-it",
   "title": "Istat It",
-  "description": "ISTAT (Istituto Nazionale di Statistica) MCP — Italy's national statistics",
-  "version": "0.1.4",
+  "description": "ISTAT (Istituto Nazionale di Statistica) MCP — Italy's national statistics via the public SDMX 2.1…",
+  "version": "0.1.5",
   "websiteUrl": "https://pipeworx.io/packs/istat-it",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-istat-it",

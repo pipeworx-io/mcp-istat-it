@@ -1,7 +1,7 @@
 {
   "name": "@pipeworx/mcp-istat-it",
-  "version": "0.1.4",
-  "description": "ISTAT (Istituto Nazionale di Statistica) MCP — Italy's national statistics",
+  "version": "0.1.5",
+  "description": "ISTAT (Istituto Nazionale di Statistica) MCP — Italy's national statistics via the public SDMX 2.1 REST web service. No auth / no API key.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-9311ff00668e7a0e23a6e39df69923cb4a3125fa4ec9fe36207be1a19773627d",
-    "sourceCommit": "a00767651388cfd017fdeac82188622721db2051"
+    "sourceHash": "v1-88b1b4a8392008484d44d57894ced956e1d696aa135626d13d33f4e93b3b71b1",
+    "sourceCommit": "33741fe6d9ba71856e73fa683c73572d1ddf2e93"
   }
 }
