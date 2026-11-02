@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-istat-it",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ISTAT (Istituto Nazionale di Statistica) MCP — Italy's national statistics via the public SDMX 2.1 REST web service. No auth / no API key.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "istat-it",
     "gatewaySlug": "istat-it",
-    "sourceHash": "v1-a7411a74aee58ab27df0fac191b0fd15dd4700c698848aa40fd5d193585b651d",
-    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
+    "sourceHash": "v1-62300b397051fb14c8205f7c452fc12da0b2dc4f01a156c8870db54abebe4f1c",
+    "sourceCommit": "0ca9712c0ac03bb0121cc7e81b202d0c45ac02ca"
   }
 }
